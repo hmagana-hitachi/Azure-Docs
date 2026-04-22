@@ -30,11 +30,11 @@ $SUB_NAME_ACR = "subs_testing_acr"
 $SUB_ID_ACR = "sub_id_testing_acr"
 
 ## Azure Kubernetes Services (AKS)
-$SUB_NAME_AKS = "Evaluation Subscription Stage"
-$RG_NAME_AKS = "hectorm"
-$SUB_ID_AKS = "ddcab969-ae27-43f1-a836-ca2a0ba21198"
+$SUB_NAME_AKS = "subscription_name"
+$RG_NAME_AKS = "rg_testing"
+$SUB_ID_AKS = "subscription_id"
 $AKS_NAME = "aks-cni-publicAPI"
-$LOCATION = "eastus"
+$LOCATION = "location"
 $KUBERNETES_VERSION = "1.34.3" # Check available versions with: az aks get-versions -l $LOCATION -o table
 $SERVICE_CIDR = "10.0.0.0/16"
 $DNS_SERVICE_IP = "10.0.0.10"
@@ -57,11 +57,11 @@ $VM_SIZE_SYSTEM = "Standard_D2s_v6" #Options for general purpose: Standard_D2s_v
 $VM_SIZE_USER = "Standard_D2s_v6" #Options for general purpose: Standard_D2s_v6, Standard_D4s_v6, Standard_D8s_v6. Pricing list here Link: https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/#pricing.
 
 ## Azure VNET (AKS dedicated)
-$RG_NAME_VNET_AKS = "hectorm"
-$SUB_NAME_VNET_AKS = "Evaluation Subscription Stage"
-$SUB_ID_VNET_AKS = "ddcab969-ae27-43f1-a836-ca2a0ba21198"
-$VNET_NAME_AKS = "vnet-aks-eastus-poc"
-$SNET_NAME_AKS = "snet-aks-poc-01"
+$RG_NAME_VNET_AKS = "rg_testing"
+$SUB_NAME_VNET_AKS = "subscription_name"
+$SUB_ID_VNET_AKS = "subscription_id"
+$VNET_NAME_AKS = "vnet_name"
+$SNET_NAME_AKS = "snet_name"
 
 ## Roles for the managed identity
 $ROLE_SUBNET = "Network Contributor"
@@ -232,7 +232,6 @@ if ($LASTEXITCODE -ne 0) {
 Write-Host "User node pool created successfully" -ForegroundColor Green
 
 ## Assign ACR pull permission to kubelet identity
-<#
 az account set --subscription $SUB_ID_ACR
 if ($LASTEXITCODE -ne 0) {
     throw "Could not change to ACR subscription: $SUB_ID_ACR"
@@ -254,7 +253,6 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 Write-Host "Assigned AcrPull role to kubelet identity on ACR" -ForegroundColor Yellow
-#>
 
 ## Optional features
 # az aks update -n $AKS_NAME -g $RG_NAME_AKS --enable-oidc-issuer
