@@ -162,16 +162,12 @@ For scripting purposes, we output certain exit codes for differing scenarios.
 
 > [!IMPORTANT]
 > Replace the variables as needed
->
+> - [x] The script creates AKS with public API plane and network restrictions using IP filtering.
+> - [x] Nodes integrated with VNET/Subnet, please plan your dedicated subnet.
+> - [x] Any questions or comments reach to Azure Admins.
 > 
-> Run it: ![AKS Script](scripts/AKS-Configuration-Template-AzureCNI-ManagedIdentity-PublicAPI.ps1)! 
+> Ready to run it?
+> ![AKS Script](scripts/AKS-Configuration-Template-AzureCNI-ManagedIdentity-PublicAPI.ps1)! 
 
 
 ## Contribute code
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
-
-If you would like to become an active contributor to this project please
-follow the instructions provided in [Microsoft Open Source Guidelines](https://opensource.microsoft.com/collaborate).
