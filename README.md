@@ -109,9 +109,38 @@ For scripting purposes, we output certain exit codes for differing scenarios.
 - [x]	Managed Identity configuration
 - [x]	For production AKS use autoscaler and 2 node system pool
 
-### More samples and snippets
+### Architecture & Configuration Recommendations
+- AKS must be deployed as a private cluster
+  - Implementation:
+    - Disable public API server endpoint
+    - Use private endpoint for cluster communication
+    -	Integrate with private DNS zone
+    -	Configure network plugin Azure CNI Overlay (`Kubenet is in retirement process 31 March 2028`)
 
-For more usage examples, take a look at our [GitHub samples repo](http://github.com/Azure/azure-cli-samples) or [https://learn.microsoft.com/cli/azure/overview](https://learn.microsoft.com/cli/azure/overview).
+  -	Disable Local Accounts:
+    -	Disable --disable-local-accounts
+    -	Enforce Azure AD (Entra ID) authentication only
+
+  -	Networking – Azure CNI Overlay
+    -	Configure AKS with Azure CNI Overlay
+    -	Use separate POD CIDR from Node VNet/Subnet CIDR
+
+  -	Node Pool Configuration
+      - System Node Pool(s)
+      - Dedicated to Kubernetes system components
+      - Smaller VM sizes allowed
+      - Minimum node count (e.g., 2–3 nodes)
+      - Taints applied: `CriticalAddonsOnly=true:NoSchedule`
+    - Workload Node Pool(s)
+      - Dedicated to application workloads
+      - Scalable independently
+      - Can have multiple pools based on workload type (e.g., CPU/GPU)
+  - Image Cleaner
+    - Enable AKS Image Cleaner feature
+  - Identity & Access Control
+    - Use Microsoft EntraID authentication with Azure RBAC.
+  - AKS Versioning Strategy
+    - Maintain AKS clusters at `N-1` version (always review the release notes and compatibility matrix)
 
 ### Write and run commands in Visual Studio Code
 
