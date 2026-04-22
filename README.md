@@ -75,7 +75,7 @@ An AKS cluster is divided into two main components:
 For scripting purposes, we output certain exit codes for differing scenarios.
 
 | Component | Description | 
-|:---------------:|:-----|
+|:---------------:|:-----:|
 | **kube apiserver** | The API server (kube-apiserver) **exposes the Kubernetes API to enable requests** to the cluster from inside and outside of the cluster. |
 | **etcd** | The highly available key-value store etcd helps to **maintain the state of your Kubernetes cluster and configuration.** | 
 | **kube-scheduler** | The scheduler (kube-scheduler) **helps to make scheduling decisions.** It watches for new pods with no assigned node and selects a node for them to run on. |
