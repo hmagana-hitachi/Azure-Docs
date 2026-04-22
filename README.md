@@ -2,12 +2,6 @@
 > [!IMPORTANT]
 > This is a quick guide to deploy AKS following best practices and recommendations, ease of use, ENJOY :sunglasses:.
 
-![AKS](https://learn.microsoft.com/en-us/azure/well-architected/service-guides/azure-kubernetes-service)
-
-![AZ CLI](https://learn.microsoft.com/cli/azure/install-azure-cli)
-
-![Azure Portal](https://portal.azure.com/)
-
 Take a test run now from [Azure Portal Cloud Shell](https://portal.azure.com/#cloudshell)!
 
 ## Introduction
@@ -29,19 +23,18 @@ The purpose of this document is to serve as a foundation for understanding recom
 
 ## Reference links
 
-* Networking: <https://learn.microsoft.com/en-us/azure/aks/plan-networking>
-* Node pools: <https://learn.microsoft.com/en-us/azure/aks/use-system-pools?tabs=azure-cli#system-and-user-node-pools>
-* Azure security baseline for AKS: <https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/azure-kubernetes-service-aks-security-baseline?toc=%2Fazure%2Faks%2Ftoc.json&bc=%2Fazure%2Faks%2Fbreadcrumb%2Ftoc.json>
-* Configuration WAF recommendations: <https://learn.microsoft.com/en-us/azure/well-architected/service-guides/azure-kubernetes-service#configuration-recommendations>
-* Networking comparison blog: <https://techcommunity.microsoft.com/blog/startupsatmicrosoftblog/choosing-the-right-networking-model-for-azure-kubernetes-service-aks-azure-cni-v/4351872>
-* AKS best practices: <https://learn.microsoft.com/en-us/azure/aks/best-practices>
-* AKS versions: <https://learn.microsoft.com/en-us/azure/aks/supported-kubernetes-versions?tabs=azure-cli#aks-kubernetes-release-calendar>
-* AKS helper: <https://azure.github.io/AKS-Construction/>
-* AKS roadmap: <https://aka.ms/aks/roadmap>
-* AKS blog: <https://aka.ms/aks/blog>
-* AKS release notes: <https://aka.ms/aks/release-notes>
-* Updates about the service, including new features and new Azure regions:
-  [AKS feed in Azure Updates](https://azure.microsoft.com/updates/?product=kubernetes-service)
+- ![Networking](https://learn.microsoft.com/en-us/azure/aks/plan-networking)
+- ![Node pools](https://learn.microsoft.com/en-us/azure/aks/use-system-pools?tabs=azure-cli#system-and-user-node-pools)
+- ![Azure security baseline for AKS](https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/azure-kubernetes-service-aks-security-baseline?toc=%2Fazure%2Faks%2Ftoc.json&bc=%2Fazure%2Faks%2Fbreadcrumb%2Ftoc.json)
+- ![Configuration WAF recommendations](https://learn.microsoft.com/en-us/azure/well-architected/service-guides/azure-kubernetes-service#configuration-recommendations)
+- ![Networking comparison blog](https://techcommunity.microsoft.com/blog/startupsatmicrosoftblog/choosing-the-right-networking-model-for-azure-kubernetes-service-aks-azure-cni-v/4351872)
+- ![AKS best practices](https://learn.microsoft.com/en-us/azure/aks/best-practices)
+- ![AKS versions](https://learn.microsoft.com/en-us/azure/aks/supported-kubernetes-versions?tabs=azure-cli#aks-kubernetes-release-calendar)
+- ![AKS helper](https://azure.github.io/AKS-Construction/)
+- ![AKS roadmap](https://aka.ms/aks/roadmap)
+- ![AKS blog](https://aka.ms/aks/blog)
+- ![AKS release notes](https://aka.ms/aks/release-notes)
+- [AKS feed in Azure Updates](https://azure.microsoft.com/updates/?product=kubernetes-service)
 
 ## AZ CLI Installation
 
