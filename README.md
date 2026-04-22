@@ -43,25 +43,6 @@ Please refer to the [install guide](https://learn.microsoft.com/cli/azure/instal
 
 A list of common install issues and their resolutions are available at [install troubleshooting](https://github.com/Azure/azure-cli/blob/dev/doc/install_troubleshooting.md).
 
-## AKS Helper
-* #### **Step 1**
-  Navigate to the AKS Construction [**AKS helper**](https://azure.github.io/AKS-Construction/)
-
-* #### **Step 2** Select your Requirements (optional)
-  Select your base `Operational` and `Security` Principles using the presets that have been designed from our field experience
-
-* #### **Step 3** Fine tune (optional)
-  Use the tabs to fine tune your cluster requirements
-
-  ![fine tune](images/azure/helper-tabs.jpg)
-* #### **Step 4** Deploy
-  In the `Deploy` tab, choose how you will deploy your new cluster, and follow the instructions
-  
-#### Preview
-
-![animated preview of AKS Construction Helper](images/azure/animgif.gif)
-
-
 ## Components
 This section describes the components that conform the cluster.
 An AKS cluster is divided into two main components:
@@ -147,6 +128,23 @@ For scripting purposes, we output certain exit codes for differing scenarios.
 - [x] Enable Defender for Containers (Recommended for Production Clusters)
 - [x] Implement backup strategy (Velero or Azure Backup for AKS)
 
+## AKS Helper
+* #### **Step 1**
+  Navigate to the AKS Construction [**AKS helper**](https://azure.github.io/AKS-Construction/)
+
+* #### **Step 2** Select your Requirements (optional)
+  Select your base `Operational` and `Security` Principles using the presets that have been designed from our field experience
+
+* #### **Step 3** Fine tune (optional)
+  Use the tabs to fine tune your cluster requirements
+
+  ![fine tune](images/azure/helper-tabs.jpg)
+* #### **Step 4** Deploy
+  In the `Deploy` tab, choose how you will deploy your new cluster, and follow the instructions
+  
+#### Preview
+
+![animated preview of AKS Construction Helper](images/azure/animgif.gif)
 ## Create AKS cluster (Via CLI)
 | OS      | Support | Note      |
 |---------|:-------:|-----------|
