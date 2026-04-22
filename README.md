@@ -142,18 +142,24 @@ For scripting purposes, we output certain exit codes for differing scenarios.
   - AKS Versioning Strategy
     - Maintain AKS clusters at `N-1` version (always review the release notes and compatibility matrix)
 
-### Write and run commands in Visual Studio Code
+**Optional depending on the criticality of the project:**
+- [x] Enable monitoring and logging (Azure Monitor / Container Insights)
+- [x] Enable Defender for Containers (Recommended for Production Clusters)
+- [x] Implement backup strategy (Velero or Azure Backup for AKS)
 
-With the [Azure CLI Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azurecli) Visual Studio Code extension, you can create `.azcli` files and use these features:
-- IntelliSense for commands and their arguments.
-- Snippets for commands, inserting required arguments automatically.
-- Run the current command in the integrated terminal.
-- Run the current command and show its output in a side-by-side editor.
-- Show documentation on mouse hover.
-- Display current subscription and defaults in status bar.
-- To enable IntelliSense for other file types like `.ps1` or `.sh`, see [microsoft/vscode-azurecli#48](https://github.com/microsoft/vscode-azurecli/issues/48).
+## Create AKS cluster (Via CLI)
+| OS      | Support | Note      |
+|---------|:-------:|-----------|
+| `Windows` | ✅      | Full support |
+| `macOS`   | ✅      | Full support |
+| `Linux`   | ✅      | Full support |
+| `Azure Portal`   | ✅      | Full support |
 
-![Azure CLI Tools in Action](https://github.com/microsoft/vscode-azurecli/blob/main/images/in_action.gif?raw=true)
+- The attached file with TXT extension is the Azure CLI script to deploy AKS cluster.
+- You will need to open the file in a terminal, Visual Studio Code or PowerShell to run it.
+- Some variables will need to be updated, please read the comments in the script file.
+- This file deploys an AKS cluster with Public API with Authorized IP ranges, depending on your networking you can expose the API publicly or privately. 
+
 
 ## Data Collection
 
