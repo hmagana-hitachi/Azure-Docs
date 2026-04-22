@@ -66,18 +66,8 @@ A list of common install issues and their resolutions are available at [install 
   
 #### Tab completion
 
-We support tab-completion for groups, commands, and some parameters
+![animated preview of AKS Construction Helper](images/azure/animgif.gif)
 
-```bash
-# looking up resource group and name
-$ az vm show -g [tab][tab]
-AccountingGroup   RGOne  WebPropertiesRG
-
-$ az vm show -g WebPropertiesRG -n [tab][tab]
-StoreVM  Bizlogic
-
-$ az vm show -g WebPropertiesRG -n Bizlogic
-```
 
 #### Query
 
