@@ -44,7 +44,7 @@ $POD_CIDR = "10.244.0.0/16"
 ## Add your office public IP, VPN gateway IP, or other trusted IPs
 ## Format: space-separated list of CIDR blocks, e.g., "203.0.113.0/24 198.51.100.0/24"
 ## Leave empty to allow all IPs (NOT RECOMMENDED for production)
-$API_SERVER_AUTHORIZED_IP_RANGES = "177.241.33.68"  # CHANGE THIS to restrict access curl -s ifconfig.me to get your public IP
+$API_SERVER_AUTHORIZED_IP_RANGES = "x.x.x.x"  # CHANGE THIS to restrict access curl -s ifconfig.me to get your public IP
 
 ## Node Pools Variables
 $NODE_SYSTEM = 1
