@@ -27,12 +27,11 @@ The purpose of this document is to serve as a foundation for understanding recom
 - Private DNS zone (Required for Private AKS)
 - Azure Container Registry (Required for container images)
 
-## Important links
+## Reference links
 
-* Networking recommendations: <https://learn.microsoft.com/en-us/azure/aks/plan-networking>
-* Node pools recommendations: <https://learn.microsoft.com/en-us/azure/aks/use-system-pools?tabs=azure-cli#system-and-user-node-pools>
-* AKS Well Architected Framework (WAF): <https://learn.microsoft.com/en-us/azure/well-architected/service-guides/azure-kubernetes-service?>
-* Azure security baseline for Azure Kubernetes Service (AKS): <https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/azure-kubernetes-service-aks-security-baseline?toc=%2Fazure%2Faks%2Ftoc.json&bc=%2Fazure%2Faks%2Fbreadcrumb%2Ftoc.json>
+* Networking: <https://learn.microsoft.com/en-us/azure/aks/plan-networking>
+* Node pools: <https://learn.microsoft.com/en-us/azure/aks/use-system-pools?tabs=azure-cli#system-and-user-node-pools>
+* Azure security baseline for AKS: <https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/azure-kubernetes-service-aks-security-baseline?toc=%2Fazure%2Faks%2Ftoc.json&bc=%2Fazure%2Faks%2Fbreadcrumb%2Ftoc.json>
 * Configuration WAF recommendations: <https://learn.microsoft.com/en-us/azure/well-architected/service-guides/azure-kubernetes-service#configuration-recommendations>
 * Networking comparison blog: <https://techcommunity.microsoft.com/blog/startupsatmicrosoftblog/choosing-the-right-networking-model-for-azure-kubernetes-service-aks-azure-cni-v/4351872>
 * AKS best practices: <https://learn.microsoft.com/en-us/azure/aks/best-practices>
