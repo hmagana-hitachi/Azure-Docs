@@ -62,23 +62,27 @@ A list of common install issues and their resolutions are available at [install 
 ![animated preview of AKS Construction Helper](images/azure/animgif.gif)
 
 
-#### Query
+## Components
+This section describes the components that conform the cluster.
+An AKS cluster is divided into two main components:
+1.	`Control plane:` The control plane provides the core Kubernetes services and orchestration of application workloads.
+2.	`Nodes:` Nodes are the underlying virtual machines (VMs) that run your applications.
 
-You can use the `--query` parameter and the [JMESPath](http://jmespath.org/) query syntax to customize your output.
+![aks-components1](images/azure/aks-components-1.png)
 
-```bash
-$ az vm list --query "[?provisioningState=='Succeeded'].{ name: name, os: storageProfile.osDisk.osType }"
-Name                    Os
-----------------------  -------
-storevm                 Linux
-bizlogic                Linux
-demo32111vm             Windows
-dcos-master-39DB807E-0  Linux
-```
 
-#### Exit codes
-
+**Control plane:** The Azure managed control plane is composed of several components that help manage the cluster:
 For scripting purposes, we output certain exit codes for differing scenarios.
+
+| Component | Description | 
+|:---------------:|:-----|
+| **kube apiserver** | The API server (kube-apiserver) **exposes the Kubernetes API to enable requests** to the cluster from inside and outside of the cluster. |
+| **etcd** | The highly available key-value store etcd helps to **maintain the state of your Kubernetes cluster and configuration.** | 
+| **kube-scheduler** | The scheduler (kube-scheduler) **helps to make scheduling decisions.** It watches for new pods with no assigned node and selects a node for them to run on. |
+| **kube-controller-manager** | The controller manager (kube-controller-manager) runs controller processes, such as noticing and **responding when nodes go down.** |
+| **cloud-controller-manager** | The cloud controller manager (cloud-controller-manager) embeds cloud-specific **control logic to run controllers specific to the cloud provider.** |
+
+
 
 |Exit Code   |Scenario   |
 |---|---|
