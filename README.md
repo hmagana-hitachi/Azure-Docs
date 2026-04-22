@@ -94,8 +94,9 @@ Each AKS cluster has at least one node, which is an Azure VM that runs Kubernete
 - [x]	For production AKS use autoscaler and 2 node system pool
 
 ### Architecture & Configuration Recommendations
-- AKS must be deployed as a private cluster
-  - Implementation:
+- AKS Implementation
+  
+  - Private cluster:
     - Disable public API server endpoint
     - Use private endpoint for cluster communication
     -	Integrate with private DNS zone
@@ -103,7 +104,7 @@ Each AKS cluster has at least one node, which is an Azure VM that runs Kubernete
 
   -	Disable Local Accounts:
     -	Disable --disable-local-accounts
-    -	Enforce Azure AD (Entra ID) authentication only
+    -	Enforce Azure AD (Entra ID) authentication only and Azure RBAC
 
   -	Networking – Azure CNI Overlay
     -	Configure AKS with Azure CNI Overlay
@@ -115,23 +116,29 @@ Each AKS cluster has at least one node, which is an Azure VM that runs Kubernete
       - Smaller VM sizes allowed
       - Minimum node count (e.g., 2–3 nodes)
       - Taints applied: `CriticalAddonsOnly=true:NoSchedule`
+      - 
     - Workload Node Pool(s)
       - Dedicated to application workloads
       - Scalable independently
       - Can have multiple pools based on workload type (e.g., CPU/GPU)
+        
   - Image Cleaner
     - Enable AKS Image Cleaner feature
+      
   - Identity & Access Control
     - Use Microsoft EntraID authentication with Azure RBAC.
+      
   - AKS Versioning Strategy
     - Maintain AKS clusters at `N-1` version (always review the release notes and compatibility matrix)
 
 **Optional depending on the criticality of the project:**
+
 - [x] Enable monitoring and logging (Azure Monitor / Container Insights)
 - [x] Enable Defender for Containers (Recommended for Production Clusters)
 - [x] Implement backup strategy (Velero or Azure Backup for AKS)
 
 ## AKS Helper
+
 * #### **Step 1**
   Navigate to the AKS Construction [**AKS helper**](https://azure.github.io/AKS-Construction/)
 
@@ -148,7 +155,9 @@ Each AKS cluster has at least one node, which is an Azure VM that runs Kubernete
 #### Preview
 
 ![animated preview of AKS Construction Helper](images/azure/animgif.gif)
+
 ## Create AKS cluster (Via CLI)
+
 | OS      | Support | Note      |
 |---------|:-------:|-----------|
 | `Windows` | ✅      | Full support |
