@@ -57,7 +57,7 @@ A list of common install issues and their resolutions are available at [install 
 * #### **Step 4** Deploy
   In the `Deploy` tab, choose how you will deploy your new cluster, and follow the instructions
   
-#### Tab completion
+#### Preview
 
 ![animated preview of AKS Construction Helper](images/azure/animgif.gif)
 
