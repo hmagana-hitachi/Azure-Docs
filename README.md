@@ -1,4 +1,4 @@
-# Azure AKS Quick Guide 
+# AKS Quick Guide 
 
 ## Introduction
 
