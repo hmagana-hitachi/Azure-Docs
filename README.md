@@ -10,7 +10,7 @@
 
 Take a test run now from [Azure Portal Cloud Shell](https://portal.azure.com/#cloudshell)!
 
-### Introduction
+## Introduction
 
 The present document provides simple guidance on recommendations, design, implementation, and validation processes related to the configuration of Azure Kubernetes Service (AKS) resources as a container orchestration platform. Additionally, it includes security best practices and hardening guidelines to strengthen the overall security posture of AKS clusters.
 The purpose of this document is to serve as a foundation for understanding recommended configurations, best practices, and governance of AKS using Microsoft Azure native tools.
@@ -50,10 +50,20 @@ Please refer to the [install guide](https://learn.microsoft.com/cli/azure/instal
 
 A list of common install issues and their resolutions are available at [install troubleshooting](https://github.com/Azure/azure-cli/blob/dev/doc/install_troubleshooting.md).
 
-### AKS Helper
+## AKS Helper
+* #### **Step 1**
+  Navigate to the AKS Construction [**helper**](https://azure.github.io/AKS-Construction/)
 
-![animated preview of AKS Construction Helper](images/azure/animgif.gif)
+* #### **Step 2** Select your Requirements (optional)
+  Select your base `Operational` and `Security` Principles using the presets that have been designed from our field experience
 
+* #### **Step 3** Fine tune (optional)
+  Use the tabs to fine tune your cluster requirements
+
+  ![fine tune](images/azure/helper-tabs.jpg)
+* #### **Step 4** Deploy
+  In the `Deploy` tab, choose how you will deploy your new cluster, and follow the instructions
+  
 #### Tab completion
 
 We support tab-completion for groups, commands, and some parameters
