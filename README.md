@@ -52,11 +52,7 @@ A list of common install issues and their resolutions are available at [install 
 
 ### AKS Helper
 
-Here are a few features and concepts that can help you get the most out of the Azure CLI.
-
-![Azure CLI Highlight Reel](doc/assets/AzBlogAnimation4.gif)
-
-![animated preview of AKS Construction Helper](images/animgif.gif)
+![animated preview of AKS Construction Helper](images/azure/animgif.gif)
 
 #### Tab completion
 
