@@ -45,7 +45,7 @@ A list of common install issues and their resolutions are available at [install 
 
 ## AKS Helper
 * #### **Step 1**
-  Navigate to the AKS Construction [**helper**](https://azure.github.io/AKS-Construction/)
+  Navigate to the AKS Construction [**AKS helper**](https://azure.github.io/AKS-Construction/)
 
 * #### **Step 2** Select your Requirements (optional)
   Select your base `Operational` and `Security` Principles using the presets that have been designed from our field experience
@@ -84,27 +84,30 @@ For scripting purposes, we output certain exit codes for differing scenarios.
 
 ![aks-components1](images/azure/aks-components-2.png)
 
+**Nodes:** Each AKS cluster has at least one node, which is an Azure VM that runs Kubernetes node components. The following components run on each node:
 
-|Exit Code   |Scenario   |
+|Component   |Description   |
 |---|---|
-|0  |Command ran successfully.   |
-|1   |Generic error; server returned bad status code, CLI validation failed, etc.   |
-|2   |Parser error; check input to command line.   |
-|3   |Missing ARM resource; used for existence check from `show` commands.   |
+|kubelet  |The kubelet ensures that **containers are running in a pod.** |
+|kube-proxy   |The kube-proxy is a network proxy that **maintains network rules on nodes.**   |
+|container runtime   |The container runtime **manages the execution and lifecycle of containers.**   |
 
-### Common scenarios and use Azure CLI effectively
+![aks-components1](images/azure/aks-components-3.png)
 
-Please check [Tips for using Azure CLI effectively](https://learn.microsoft.com/en-us/cli/azure/use-cli-effectively). It describes some common scenarios:
-
-- [Output formatting (json, table, or tsv)](https://learn.microsoft.com/en-us/cli/azure/use-cli-effectively#output-formatting-json-table-or-tsv)
-- [Pass values from one command to another](https://learn.microsoft.com/en-us/cli/azure/use-cli-effectively#pass-values-from-one-command-to-another)
-- [Async operations](https://learn.microsoft.com/en-us/cli/azure/use-cli-effectively#async-operations)
-- [Generic update arguments](https://learn.microsoft.com/en-us/cli/azure/use-cli-effectively#generic-update-arguments)
-- [Generic resource commands - `az resource`](https://learn.microsoft.com/en-us/cli/azure/use-cli-effectively#generic-resource-commands---az-resource)
-- [REST API command - `az rest`](https://learn.microsoft.com/en-us/cli/azure/use-cli-effectively#rest-api-command---az-rest)
-- [Quoting issues](https://learn.microsoft.com/en-us/cli/azure/use-cli-effectively#quoting-issues)
-- [Work behind a proxy](https://learn.microsoft.com/en-us/cli/azure/use-cli-effectively#work-behind-a-proxy)
-- [Concurrent builds](https://learn.microsoft.com/en-us/cli/azure/use-cli-effectively#concurrent-builds)
+## Recommendations
+**The ideal deployment of the AKS cluster covers the following baseline:**
+- [x] Private API server
+- [x] Plan the networking in advance
+- [x]	Plan your cluster size according to your workloads
+- [x]	Local accounts disabled
+- [x]	Azure RBAC and EntraID enabled
+- [x]	VNET/Subnet integration
+- [x]	Azure CNI Overlay
+- [x]	Private cluster enabled
+- [x]	Image cleaner
+- [x]	2 node pools (system and workload)
+- [x]	Managed Identity configuration
+- [x]	For production AKS use autoscaler and 2 node system pool
 
 ### More samples and snippets
 
