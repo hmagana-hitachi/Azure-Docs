@@ -52,7 +52,9 @@ An AKS cluster is divided into two main components:
 ![aks-components1](images/azure/aks-components-1.png)
 
 
-**Control plane:** The Azure managed control plane is composed of several components that help manage the cluster:
+### Control plane:
+
+The Azure managed control plane is composed of several components that help manage the cluster:
 For scripting purposes, we output certain exit codes for differing scenarios.
 
 | Component | Description | 
@@ -65,7 +67,8 @@ For scripting purposes, we output certain exit codes for differing scenarios.
 
 ![aks-components1](images/azure/aks-components-2.png)
 
-**Nodes:** Each AKS cluster has at least one node, which is an Azure VM that runs Kubernetes node components. The following components run on each node:
+### Nodes:
+Each AKS cluster has at least one node, which is an Azure VM that runs Kubernetes node components. The following components run on each node:
 
 |Component   |Description   |
 |---|---|
