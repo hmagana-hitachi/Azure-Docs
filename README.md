@@ -2,9 +2,11 @@
 > [!IMPORTANT]
 > This is a quick guide to deploy AKS following best practices and recommendations, ease of use, ENJOY :sunglasses:.
 
-[![AKS](https://img.shields.io/pypi/pyversions/azure-cli.svg?maxAge=2592000)](https://learn.microsoft.com/en-us/azure/well-architected/service-guides/azure-kubernetes-service)
-[![AZ CLI](https://dev.azure.com/azure-sdk/public/_apis/build/status/cli/Azure.azure-cli?branchName=dev)](https://dev.azure.com/azure-sdk/public/_build/latest?definitionId=246&branchName=dev)
-[![Azure](https://img.shields.io/badge/Slack-azurecli.slack.com-blue.svg)](https://azurecli.slack.com)
+![AKS](https://learn.microsoft.com/en-us/azure/well-architected/service-guides/azure-kubernetes-service)
+
+![AZ CLI](https://learn.microsoft.com/cli/azure/install-azure-cli)
+
+![Azure Portal](https://portal.azure.com/)
 
 Take a test run now from [Azure Cloud Shell](https://portal.azure.com/#cloudshell)!
 
