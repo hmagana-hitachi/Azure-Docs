@@ -1,18 +1,34 @@
 # Azure AKS Quick Guide 
-> [!IMPORTANT]
-> This is a quick guide to deploy AKS following best practices and recommendations, ease of use, ENJOY :sunglasses:.
-
-Take a test run now from [Azure Portal Cloud Shell](https://portal.azure.com/#cloudshell)!
 
 ## Introduction
 
 The present document provides simple guidance on recommendations, design, implementation, and validation processes related to the configuration of Azure Kubernetes Service (AKS) resources as a container orchestration platform. Additionally, it includes security best practices and hardening guidelines to strengthen the overall security posture of AKS clusters.
 The purpose of this document is to serve as a foundation for understanding recommended configurations, best practices, and governance of AKS using Microsoft Azure native tools.
 
+> [!IMPORTANT]
+> This is a quick guide to deploy AKS following best practices and recommendations, ease of use, ENJOY :sunglasses:.
+>
+> Take a test run now from [Azure Portal Cloud Shell](https://portal.azure.com/#cloudshell)!
+
 > [!NOTE]
 > If your project requires specific configurations or unique features, the AKS Helper can be used as a reference or supporting tool to generate a customized deployment script aligned with your requirements.
 > 
 > **AKS Helper link:** https://azure.github.io/AKS-Construction/
+
+## Reference links
+
+- [Networking](https://learn.microsoft.com/en-us/azure/aks/plan-networking)
+- [Node pools](https://learn.microsoft.com/en-us/azure/aks/use-system-pools?tabs=azure-cli#system-and-user-node-pools)
+- [Azure security baseline for AKS](https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/azure-kubernetes-service-aks-security-baseline?toc=%2Fazure%2Faks%2Ftoc.json&bc=%2Fazure%2Faks%2Fbreadcrumb%2Ftoc.json)
+- [Configuration WAF recommendations](https://learn.microsoft.com/en-us/azure/well-architected/service-guides/azure-kubernetes-service#configuration-recommendations)
+- [Networking comparison blog](https://techcommunity.microsoft.com/blog/startupsatmicrosoftblog/choosing-the-right-networking-model-for-azure-kubernetes-service-aks-azure-cni-v/4351872)
+- [AKS best practices](https://learn.microsoft.com/en-us/azure/aks/best-practices)
+- [AKS versions](https://learn.microsoft.com/en-us/azure/aks/supported-kubernetes-versions?tabs=azure-cli#aks-kubernetes-release-calendar)
+- [AKS helper](https://azure.github.io/AKS-Construction/)
+- [AKS roadmap](https://aka.ms/aks/roadmap)
+- [AKS blog](https://aka.ms/aks/blog)
+- [AKS release notes](https://aka.ms/aks/release-notes)
+- [AKS feed in Azure Updates](https://azure.microsoft.com/updates/?product=kubernetes-service)
 
 ## Pre-requisites to deploy
 - Azure CLI
@@ -20,21 +36,6 @@ The purpose of this document is to serve as a foundation for understanding recom
 - RBAC role on the subscription
 - Private DNS zone (Required for Private AKS)
 - Azure Container Registry (Required for container images)
-
-## Reference links
-
-- ![Networking](https://learn.microsoft.com/en-us/azure/aks/plan-networking)
-- ![Node pools](https://learn.microsoft.com/en-us/azure/aks/use-system-pools?tabs=azure-cli#system-and-user-node-pools)
-- ![Azure security baseline for AKS](https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/azure-kubernetes-service-aks-security-baseline?toc=%2Fazure%2Faks%2Ftoc.json&bc=%2Fazure%2Faks%2Fbreadcrumb%2Ftoc.json)
-- ![Configuration WAF recommendations](https://learn.microsoft.com/en-us/azure/well-architected/service-guides/azure-kubernetes-service#configuration-recommendations)
-- ![Networking comparison blog](https://techcommunity.microsoft.com/blog/startupsatmicrosoftblog/choosing-the-right-networking-model-for-azure-kubernetes-service-aks-azure-cni-v/4351872)
-- ![AKS best practices](https://learn.microsoft.com/en-us/azure/aks/best-practices)
-- ![AKS versions](https://learn.microsoft.com/en-us/azure/aks/supported-kubernetes-versions?tabs=azure-cli#aks-kubernetes-release-calendar)
-- ![AKS helper](https://azure.github.io/AKS-Construction/)
-- ![AKS roadmap](https://aka.ms/aks/roadmap)
-- ![AKS blog](https://aka.ms/aks/blog)
-- ![AKS release notes](https://aka.ms/aks/release-notes)
-- [AKS feed in Azure Updates](https://azure.microsoft.com/updates/?product=kubernetes-service)
 
 ## AZ CLI Installation
 
