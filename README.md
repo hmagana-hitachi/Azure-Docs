@@ -160,103 +160,12 @@ For scripting purposes, we output certain exit codes for differing scenarios.
 - Some variables will need to be updated, please read the comments in the script file.
 - This file deploys an AKS cluster with Public API with Authorized IP ranges, depending on your networking you can expose the API publicly or privately. 
 
+> [!IMPORTANT]
+> Replace the variables as needed
+>
+> 
+> Run it: ![AKS Script](scripts/AKS-Configuration-Template-AzureCNI-ManagedIdentity-PublicAPI.ps1)! 
 
-## Data Collection
-
-The software may collect information about you and your use of the software and send it to Microsoft. Microsoft may use this information to provide services and improve our products and services. You may turn off the telemetry as described in the repository. There are also some features in the software that may enable you and Microsoft to collect data from users of your applications. If you use these features, you must comply with applicable law, including providing appropriate notices to users of your applications together with a copy of Microsoft's privacy statement. Our privacy statement is located at https://go.microsoft.com/fwlink/?LinkID=824704. You can learn more about data collection and use in the help documentation and our privacy statement. Your use of the software operates as your consent to these practices.
-
-### Telemetry Configuration
-
-Telemetry collection is on by default. To opt out, please run `az config set core.collect_telemetry=no` to turn it off.
-
-## Reporting issues and feedback
-
-If you encounter any bugs with the tool please file an issue in the [Issues](https://github.com/Azure/azure-cli/issues) section of our GitHub repo.
-
-To provide feedback from the command line, try the `az feedback` command.
-
-\[Microsoft internal] You may contact the developer team via azpycli@microsoft.com.
-
-## Developer installation
-
-### Docker
-
-We maintain a Docker image preconfigured with the Azure CLI.
-See our [Docker tags](https://mcr.microsoft.com/v2/azure-cli/tags/list) for available versions.
-
-```bash
-$ docker run -u $(id -u):$(id -g) -v ${HOME}:/home/az -e HOME=/home/az --rm -it mcr.microsoft.com/azure-cli:<version>
-```
-
-### Edge builds
-
-If you want to get the latest build from the `dev` branch, you can use our "edge" builds.
-
-You can download the latest builds by following the links below:
-
-|      Package      | Link                                       |
-|:-----------------:|:-------------------------------------------|
-|        MSI        | https://aka.ms/InstallAzureCliWindowsEdge  |
-| Homebrew Formula  | https://aka.ms/InstallAzureCliHomebrewEdge |
-| Ubuntu Bionic Deb | https://aka.ms/InstallAzureCliBionicEdge   |
-| Ubuntu Focal Deb  | https://aka.ms/InstallAzureCliFocalEdge    |
-| Ubuntu Jammy Deb  | https://aka.ms/InstallAzureCliJammyEdge    |
-|      RPM el8      | https://aka.ms/InstallAzureCliRpmEl8Edge   |
-
-On Windows, you need to uninstall the official version before installing the edge build. (See https://github.com/Azure/azure-cli/issues/25607#issuecomment-1452855212)
-
-You can easily install the latest Homebrew edge build with the following command:
-
-```bash
-# You need to uninstall the stable version with `brew uninstall azure-cli` first
-curl --location --silent --output azure-cli.rb https://aka.ms/InstallAzureCliHomebrewEdge
-brew install --build-from-source azure-cli.rb
-```
-
-You can install the edge build on Ubuntu Jammy with the following command:
-
-```bash
-curl --location --silent --output azure-cli_jammy.deb https://aka.ms/InstallAzureCliJammyEdge && dpkg -i azure-cli_jammy.deb
-```
-
-And install the edge build with rpm package on RHEL 8 or CentOS Stream 8:
-
-```bash
-dnf install -y $(curl --location --silent --output /dev/null --write-out %{url_effective} https://aka.ms/InstallAzureCliRpmEl8Edge)
-```
-
-Here's an example of installing edge builds with pip3 in a virtual environment. The `--upgrade-strategy=eager` option will install the edge builds of dependencies as well. 
-
-```bash
-$ python3 -m venv env
-$ . env/bin/activate
-$ pip3 install --pre azure-cli --extra-index-url https://azurecliprod.blob.core.windows.net/edge --upgrade-strategy=eager
-```
-
-To upgrade your current edge build pass the `--upgrade` option. The `--no-cache-dir` option is also recommended since
-the feed is frequently updated.
-
-```bash
-$ pip3 install --upgrade --pre azure-cli --extra-index-url https://azurecliprod.blob.core.windows.net/edge --no-cache-dir --upgrade-strategy=eager
-```
-
-The edge build is generated for each PR merged to the `dev` branch as a part of the Azure DevOps Pipelines. 
-
-### Get builds of arbitrary commit or PR
-
-If you would like to get builds of arbitrary commit or PR, see:
-
-[Try new features before release](doc/try_new_features_before_release.md)
-
-## Developer setup
-
-If you would like to setup a development environment and contribute to the CLI, see:
-
-[Configuring Your Machine](https://github.com/Azure/azure-cli/blob/dev/doc/configuring_your_machine.md)
-
-[Authoring Command Modules](https://github.com/Azure/azure-cli/tree/dev/doc/authoring_command_modules)
-
-[Code Generation](https://github.com/Azure/aaz-dev-tools)
 
 ## Contribute code
 
