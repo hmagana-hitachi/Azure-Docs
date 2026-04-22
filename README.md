@@ -82,6 +82,7 @@ For scripting purposes, we output certain exit codes for differing scenarios.
 | **kube-controller-manager** | The controller manager (kube-controller-manager) runs controller processes, such as noticing and **responding when nodes go down.** |
 | **cloud-controller-manager** | The cloud controller manager (cloud-controller-manager) embeds cloud-specific **control logic to run controllers specific to the cloud provider.** |
 
+![aks-components1](images/azure/aks-components-2.png)
 
 
 |Exit Code   |Scenario   |
