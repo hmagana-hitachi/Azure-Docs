@@ -2,7 +2,7 @@
 
 ## Architecture
 
-![Logical Application Architecture Diagram](images/aks-store-architecture.png)
+![Logical Application Architecture Diagram](./images/aks-store-architecture.png)
 
 
 The application has the following services: 
