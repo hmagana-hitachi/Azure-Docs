@@ -4,6 +4,7 @@
 
 ![Logical Application Architecture Diagram](images/azure/aks-store-architecture.png)
 
+
 The application has the following services: 
 
 | Service | Description |
