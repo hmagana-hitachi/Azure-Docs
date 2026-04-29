@@ -1,3 +1,13 @@
+# Demo AKS Pet Store
+
+## Architecture
+![Logical Application Architecture Diagram](./images/azure/aks-store-architecture.png)
+
+> Store front: Web application for customers to view products and place orders.
+> Product service: Shows product information.
+> Order service: Places orders.
+> RabbitMQ: Message queue for an order queue.
+
 - Create the YAML file for the AKS deployment. This file will define the deployment and service for the pet store application. ``aks-store-quickstart.yaml``
 - ``kubectl apply -f aks-store-quickstart.yaml``
 - ``kubectl get pods -o wide``
