@@ -1,6 +1,7 @@
 # Demo AKS Pet Store
 
 ## Architecture
+
 ![Logical Application Architecture Diagram](images/azure/aks-store-architecture.png)
 
 > Store front: Web application for customers to view products and place orders.
