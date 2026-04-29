@@ -395,150 +395,7 @@ This approach significantly reduces attack surface and improves compliance.”
 
 ---
 
-# 9. Demo Section – Deploying a Secure AKS Cluster
-
-## Demo Goal
-
-Show how to deploy a production-style AKS cluster securely.
-
----
-
-# 9.1 Demo Prerequisites
-
-## Slide Content
-
-* Azure Subscription
-* Azure CLI
-* kubectl
-* Resource Group
-* Virtual Network
-
-## Speaker Notes
-
-“Before deploying AKS we need:
-
-* Azure CLI
-* kubectl
-* A resource group
-* Networking resources
-* Proper permissions in Azure”
-
----
-
-# 9.2 Create Resource Group
-
-```bash
-az group create \
-  --name rg-aks-demo \
-  --location eastus
-```
-
-## Speaker Notes
-
-“First we create the resource group where all AKS resources will be deployed.”
-
----
-
-# 9.3 Create Virtual Network
-
-```bash
-az network vnet create \
-  --resource-group rg-aks-demo \
-  --name aks-vnet \
-  --address-prefix 10.0.0.0/8 \
-  --subnet-name aks-subnet \
-  --subnet-prefix 10.240.0.0/16
-```
-
-## Speaker Notes
-
-“Next we create a dedicated virtual network and subnet for the AKS cluster.
-
-This provides better network isolation and enterprise-level connectivity.”
-
----
-
-# 9.4 Create Secure AKS Cluster
-
-```bash
-az aks create \
-  --resource-group rg-aks-demo \
-  --name aks-secure-demo \
-  --node-count 2 \
-  --enable-managed-identity \
-  --enable-aad \
-  --network-plugin azure \
-  --vnet-subnet-id <SUBNET_ID> \
-  --enable-private-cluster \
-  --generate-ssh-keys
-```
-
-## Speaker Notes
-
-“Here we deploy a secure AKS cluster.
-
-Important security configurations include:
-
-* Managed identities
-* Microsoft Entra ID integration
-* Azure CNI networking
-* Private cluster deployment
-
-This removes public API exposure and improves identity management.”
-
----
-
-# 9.5 Connect to the Cluster
-
-```bash
-az aks get-credentials \
-  --resource-group rg-aks-demo \
-  --name aks-secure-demo
-```
-
-```bash
-kubectl get nodes
-```
-
-## Speaker Notes
-
-“After deployment we connect to the cluster and validate the worker nodes are healthy.”
-
----
-
-# 9.6 Deploy Sample Application
-
-```bash
-kubectl create deployment nginx-demo \
-  --image=nginx
-```
-
-```bash
-kubectl expose deployment nginx-demo \
-  --port=80 \
-  --type=LoadBalancer
-```
-
-## Speaker Notes
-
-“Now we deploy a sample NGINX application and expose it using a Kubernetes service.”
-
----
-
-# 9.7 Verify Deployment
-
-```bash
-kubectl get pods
-kubectl get svc
-```
-
-## Speaker Notes
-
-“Finally we verify the application deployment and confirm service exposure.”
-
----
-
-# 10. AKS Security Recommendations
+# 9. AKS Security Recommendations
 
 ## Slide Content
 
@@ -565,7 +422,7 @@ Production environments should include:
 
 ---
 
-# 11. Monitoring and Observability
+# 10. Monitoring and Observability
 
 ## Slide Content
 
@@ -591,7 +448,7 @@ Organizations may also integrate Prometheus and Grafana for advanced observabili
 
 ---
 
-# 12. Common AKS Challenges
+# 11. Common AKS Challenges
 
 ## Slide Content
 
@@ -615,7 +472,7 @@ Common operational areas include:
 
 ---
 
-# 13. Closing Summary
+# 12. Closing Summary
 
 ## Speaker Notes
 
@@ -631,7 +488,7 @@ Thank you.”
 
 ---
 
-# 14. Optional Q&A Topics
+# 13. Optional Q&A Topics
 
 Potential questions:
 
