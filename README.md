@@ -9,6 +9,8 @@ The purpose of this document is to serve as a foundation for understanding recom
 > This is a quick guide to deploy AKS following best practices and recommendations, ease of use, ENJOY :sunglasses:.
 >
 > Take a test run now from [Azure Portal Cloud Shell](https://portal.azure.com/#cloudshell)!
+>
+> Test out your ``CLI`` skills in this playground: [K8s Playground](https://killercoda.com/kubernetes/scenario/playground)!
 
 > [!NOTE]
 > If your project requires specific configurations or unique features, the AKS Helper can be used as a reference or supporting tool to generate a customized deployment script aligned with your requirements.
