@@ -2,7 +2,7 @@
 
 ## Architecture
 
-![Logical Application Architecture Diagram](./images/aks-store-architecture.png)
+![Architecture-Diagram](images/azure/pet-store-diagram.png)
 
 
 The application has the following services: 
