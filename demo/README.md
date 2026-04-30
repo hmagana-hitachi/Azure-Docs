@@ -15,8 +15,19 @@ The application has the following services:
 | `rabbitmq` | RabbitMQ for an order queue (message control) |
 
 - Create the YAML file for the AKS deployment. This file will define the deployment and service for the pet store application. ``aks-store-quickstart.yaml``
-- ``kubectl apply -f aks-store-quickstart.yaml``
-- ``kubectl get pods -o wide``
+
+ ```bash
+ kubectl create namespace pet-store
+```
+
+```bash
+kubectl apply -n pet-store -f aks-store-quickstart.yaml
+```
+
+```bash
+kubectl get pods -o wide
+```
+
 - Run the following command to get the external IP address of the service: 
 
 >
@@ -37,8 +48,11 @@ while ((Get-Date) -le $endTime) {
 }
 ```
 
-- For reverting the deployment, run the following command: ``kubectl delete -f aks-store-quickstart.yaml``
-- 
+- For reverting the deployment, run the following command:
+
+```bash
+kubectl delete -f aks-store-quickstart.yaml``
+```
 
 # AKS (Azure Kubernetes Service) – Presentation & Demo Script
 
