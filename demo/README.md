@@ -2,7 +2,7 @@
 
 ## Architecture
 
-![Architecture-Diagram](images/azure/pet-store-diagram.png)
+![Architecture-Diagram](https://github.com/h-e-c-t-o-r-m/Azure-Docs/blob/main/images/azure/pet-store-diagram.png)
 
 
 The application has the following services: 
