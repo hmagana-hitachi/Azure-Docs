@@ -1,4 +1,4 @@
-# AKS (Azure Kubernetes Service) – Presentation & Demo Script
+# AKS – Presentation & Demo
 
 ## Presentation Goal
 
@@ -14,7 +14,7 @@ Provide a quick but practical introduction to Azure Kubernetes Service (AKS), ex
 
 AKS is Microsoft’s managed Kubernetes platform hosted in Azure. It allows organizations to deploy, manage, and scale containerized applications without needing to manually manage the Kubernetes control plane.
 
-Instead of maintaining Kubernetes masters, upgrades, availability, and orchestration manually, AKS simplifies operations while still providing the flexibility and power of Kubernetes.”
+Instead of maintaining Kubernetes masters, workers, upgrades, availability, and orchestration manually, AKS simplifies operations while still providing the flexibility and power of Kubernetes.”
 
 ---
 
@@ -23,7 +23,7 @@ Instead of maintaining Kubernetes masters, upgrades, availability, and orchestra
 ## Slide Content
 
 * Open-source container orchestration platform
-* Automates deployment and scaling
+* Fully integration with CI/CD like DevOps, GitHub Actions
 * Handles container lifecycle management
 * Provides high availability and self-healing
 
