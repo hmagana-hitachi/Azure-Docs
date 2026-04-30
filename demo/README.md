@@ -9,10 +9,10 @@ The application has the following services:
 
 | Service | Description |
 | --- | --- |
-| `order-service` | This service is used for placing orders (Javascript) |
-| `product-service` | This service is used to perform CRUD operations on products (Rust) |
-| `store-front` | Web app for customers to place orders (Vue.js javascript framework for interactive session) |
-| `rabbitmq` | RabbitMQ for an order queue (message control) |
+| `store-front` | **Web app** for customers to place orders (Vue.js javascript framework for interactive session) |
+| `order-service` | This service is used for **placing orders** (Javascript) |
+| `product-service` | This service is used to **perform CRUD operations on products** (Rust) |
+| `rabbitmq` | RabbitMQ for an order queue (**message control**) |
 
 - Create the YAML file for the AKS deployment. This file will define the deployment and service for the pet store application. ``aks-store-quickstart.yaml``
 
