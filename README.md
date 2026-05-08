@@ -139,7 +139,9 @@ Each AKS cluster has at least one node, which is an Azure VM that runs Kubernete
 - [x] Enable Defender for Containers (Recommended for Production Clusters)
 - [x] Implement backup strategy (Velero or Azure Backup for AKS)
 
-## AKS Helper
+## AKS Helper (Planning tool)
+
+### You can use AKS helper to build your own AKS configuration with specific configurations, the tool can provide you a Bicep file, PowerShell script or AZ CLI script, this is an optional tool if you want to have a specific AKS cluster build.
 
 * #### **Step 1**
   Navigate to the AKS Construction [**AKS helper**](https://azure.github.io/AKS-Construction/)
